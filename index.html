@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蔷薇文案工坊</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=PingFang+SC:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bloom-container">
+        <div class="title-decor left-petal"></div>
+        <h1 class="art-title">
+            <span class="char qiāng">蔷</span>
+            <span class="char wēi">薇</span>
+            <span class="char wén">文</span>
+            <span class="char àn">案</span>
+            <span class="char gōng">工</span>
+            <span class="char fāng">坊</span>
+        </h1>
+        <div class="title-decor right-petal"></div>
+        <p class="subtitle">让每一篇文案都如蔷薇盛放 🌸</p>
+    </div>
+        <div class="chat-window">
+            <div class="message-flow" id="messages"></div>
+            <div id="loading" class="bloom-loader" style="display: none;">
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+            </div>
+            <div class="input-group">
+                <input id="chat-input" type="text" placeholder="写下你的灵感..." />
+                <button class="send-btn" onclick="sendMessage()">
+                    <span>绽放</span>
+                    <svg class="icon-send" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                </button>
+                <div class="more-menu">
+                    <button class="menu-trigger" onclick="toggleDropdown(event)">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </button>
+                    <div class="menu-items" id="dropdownMenu">
+                        <div class="menu-item" onclick="toggleTheme()">
+                            <svg class="icon-theme" viewBox="0 0 24 24"><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1-8.313-12.454z"/></svg>
+                            <span>昼夜切换</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
