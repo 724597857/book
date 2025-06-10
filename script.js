@@ -94,10 +94,13 @@ function sendMessage() {
     const apiKey = 'sk-ab58aa9a16a74848bfef285f2cc35ef3';
     const endpoint = 'https://api.deepseek.com/chat/completions';
 
+    // 在这里添加固定的提示词
+    const fixedPrompt = "你是一个非常专业的小红书文案生成器。请根据用户输入的主题，创作一篇符合小红书风格的文案。文案要求：1. 标题要吸引人，使用emoji增加趣味性；2. 正文包含多个段落，每段不要太长，使用自然的口语化表达；3. 添加相关的话题标签，放在文案最后；4. 整体风格活泼、年轻化，适当使用网络流行语和表情符号。";
+
     const payload = {
         model: "deepseek-chat",
         messages: [
-            { role: "system", content: "You are a helpful assistant" },
+            { role: "system", content: fixedPrompt },
             { role: "user", content: message }
         ],
         stream: false
